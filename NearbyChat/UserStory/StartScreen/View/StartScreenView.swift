@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import BluetoothServiceInterface
 
 struct StartScreenView: View {
 
@@ -21,13 +22,10 @@ struct StartScreenView: View {
 private extension StartScreenView {
 
     var content: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                ForEach(state.peers) { item in
-                    cellView(item: item)
-                }
+        List {
+            ForEach(state.peers) { item in
+                cellView(item: item)
             }
-            .padding(.horizontal)
         }
         .scrollIndicators(.hidden)
         .alert(state.alert.title, isPresented: $state.showAlert) {
@@ -42,19 +40,17 @@ private extension StartScreenView {
     }
 
     func cellView(item: Peer) -> some View {
-        VStack(spacing: 4) {
+        Button {
+            output.onTapPeerCell(with: item)
+        } label: {
             HStack(spacing: .zero) {
                 Text(item.peer.displayName)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .foregroundStyle(.secondary)
             }
-            Divider()
         }
-        .contentShape(.rect)
-        .onTapGesture {
-            output.onTapPeerCell(with: item)
-        }
+        .foregroundStyle(.primary)
     }
 
     var buttonContainer: some View {

@@ -6,12 +6,17 @@
 import Foundation
 import MultipeerConnectivity
 
-struct Peer: Identifiable, Hashable {
+public struct Peer: Identifiable, Hashable {
 
-    let peer: MCPeerID
-    let status: Status
+    public let peer: MCPeerID
+    public let status: Status
 
-    var id: String {
+    public init(peer: MCPeerID, status: Status) {
+        self.peer = peer
+        self.status = status
+    }
+
+    public var id: String {
         peer.displayName
     }
 }
@@ -20,7 +25,7 @@ struct Peer: Identifiable, Hashable {
 
 extension Peer {
 
-    enum Status {
+    public enum Status: Hashable {
 
         case connected
         case disconnected

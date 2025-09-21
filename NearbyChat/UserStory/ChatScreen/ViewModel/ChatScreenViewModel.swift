@@ -3,13 +3,16 @@
 //  Copyright © 2025 MightyKingRichard. All rights reserved.
 //
 
+import MKRCore
+import BluetoothServiceInterface
+
 final class ChatScreenViewModel: Sendable {
 
     private let state: ChatScreenViewState
-    private let blueService: BluetoothService
-    private let logger = MRKLogger("Chat View Model")
+    private let blueService: AnyBluetoothService
+    private let logger = MKRLogger("Chat View Model")
 
-    init(state: ChatScreenViewState, blueService: BluetoothService) {
+    init(state: ChatScreenViewState, blueService: AnyBluetoothService) {
         self.state = state
         self.blueService = blueService
     }
@@ -37,6 +40,7 @@ extension ChatScreenViewModel {
 
     func onTapSendMessage() {
         logger.logEvent()
+        guard !state.inputText.isEmpty else { return }
 
         let message = state.inputText
         state.messages.append(.init(author: "Вы", text: message, isYou: true))

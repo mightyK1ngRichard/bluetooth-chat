@@ -6,9 +6,11 @@
 import Foundation
 import Combine
 import MultipeerConnectivity
+import MKRCore
+import BluetoothServiceInterface
 
 /// Сервис для работы с P2P-соединением через Bluetooth/Wi-Fi
-final class BluetoothService: NSObject, @unchecked Sendable {
+public final class BluetoothServiceImpl: NSObject, @unchecked Sendable {
 
     /// Идентификация устройства в сети
     private let myPeerID = MCPeerID(displayName: UIDevice.current.name)
@@ -28,29 +30,33 @@ final class BluetoothService: NSObject, @unchecked Sendable {
 
     private var messageContinuation: AsyncStream<(peer: MCPeerID, message: String)>.Continuation?
     /// Стрим сообщений
-    private(set) var messageStream: AsyncStream<(peer: MCPeerID, message: String)>!
+    private var _messageStream: AsyncStream<(peer: MCPeerID, message: String)>!
 
-    private let logger = MRKLogger("Bluetooth Service")
+    private let logger = MKRLogger("Bluetooth Service")
 }
 
 // MARK: - AnyBluetoothService
 
-extension BluetoothService {
+extension BluetoothServiceImpl: AnyBluetoothService {
 
-    var peersPublisher: AnyPublisher<Peer, Never> {
+    public var messageStream: AsyncStream<(peer: MCPeerID, message: String)> {
+        _messageStream
+    }
+
+    public var peersPublisher: AnyPublisher<Peer, Never> {
         peersSubject.eraseToAnyPublisher()
     }
 
-    var invitationPublisher: AnyPublisher<(MCPeerID, (Bool) -> Void), Never> {
+    public var invitationPublisher: AnyPublisher<(MCPeerID, (Bool) -> Void), Never> {
         invitationSubject.eraseToAnyPublisher()
     }
 
-    var changeStatePublisher: AnyPublisher<MCSessionState, Never> {
+    public var changeStatePublisher: AnyPublisher<MCSessionState, Never> {
         changeStateSubject.eraseToAnyPublisher()
     }
 
     /// Запуск сессии
-    func start(roomName: String) {
+    public func start(roomName: String) {
         session = MCSession(peer: myPeerID, securityIdentity: nil, encryptionPreference: .required)
         session?.delegate = self
 
@@ -62,7 +68,7 @@ extension BluetoothService {
         browser?.delegate = self
         browser?.startBrowsingForPeers()
 
-        messageStream = AsyncStream { continuation in
+        _messageStream = AsyncStream { continuation in
             self.messageContinuation = continuation
         }
 
@@ -70,7 +76,7 @@ extension BluetoothService {
     }
 
     /// Завершение сесии
-    func stop() {
+    public func stop() {
         advertiser?.stopAdvertisingPeer()
         browser?.stopBrowsingForPeers()
         session?.disconnect()
@@ -81,13 +87,13 @@ extension BluetoothService {
 
         messageContinuation?.finish()
         messageContinuation = nil
-        messageStream = nil
+        _messageStream = nil
 
         logger.info("Сессия Bluetooth завершена")
     }
 
     /// Подключение к выбранному peer
-    func connect(to peerID: MCPeerID) {
+    public func connect(to peerID: MCPeerID) {
         guard let session = session else { return }
 
         browser?.invitePeer(peerID, to: session, withContext: nil, timeout: 30)
@@ -95,7 +101,7 @@ extension BluetoothService {
     }
 
     /// Отправка текста всем подключённым peers
-    func sendMessage(_ message: String) async throws {
+    public func sendMessage(_ message: String) async throws {
         guard let session,
               !session.connectedPeers.isEmpty
         else { return }
@@ -108,16 +114,16 @@ extension BluetoothService {
 
 // MARK: - MCSessionDelegate
 
-extension BluetoothService: MCSessionDelegate {
+extension BluetoothServiceImpl: MCSessionDelegate {
 
     /// Каждый раз, когда состояние подключения с конкретным peer изменяется
-    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+    public func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         logger.info("Соединение с \(peerID.displayName) изменилось на \(String(describing: state))")
         changeStateSubject.send(state)
     }
 
     /// Когда peer отправил данные (Data) через `session.send(_:toPeers:with:)`
-    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+    public func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         guard let text = String(data: data, encoding: .utf8) else {
             logger.error("Ошибка при декодировании данных")
             return
@@ -128,7 +134,7 @@ extension BluetoothService: MCSessionDelegate {
     }
 
     /// Если peer открыл stream
-    func session(
+    public func session(
         _ session: MCSession,
         didReceive stream: InputStream,
         withName streamName: String,
@@ -138,7 +144,7 @@ extension BluetoothService: MCSessionDelegate {
     }
 
     /// Когда peer начинает передачу ресурса (файла)
-    func session(
+    public func session(
         _ session: MCSession,
         didStartReceivingResourceWithName resourceName: String,
         fromPeer peerID: MCPeerID,
@@ -147,7 +153,7 @@ extension BluetoothService: MCSessionDelegate {
     }
 
     /// Когда peer завершил передачу ресурса
-    func session(
+    public func session(
         _ session: MCSession,
         didFinishReceivingResourceWithName resourceName: String,
         fromPeer peerID: MCPeerID,
@@ -159,9 +165,9 @@ extension BluetoothService: MCSessionDelegate {
 
 // MARK: - MCNearbyServiceAdvertiserDelegate
 
-extension BluetoothService: MCNearbyServiceAdvertiserDelegate {
+extension BluetoothServiceImpl: MCNearbyServiceAdvertiserDelegate {
 
-    func advertiser(
+    public func advertiser(
         _ advertiser: MCNearbyServiceAdvertiser,
         didReceiveInvitationFromPeer peerID: MCPeerID,
         withContext context: Data?,
@@ -178,9 +184,9 @@ extension BluetoothService: MCNearbyServiceAdvertiserDelegate {
 
 // MARK: - MCNearbyServiceBrowserDelegate
 
-extension BluetoothService: MCNearbyServiceBrowserDelegate {
+extension BluetoothServiceImpl: MCNearbyServiceBrowserDelegate {
 
-    func browser(
+    public func browser(
         _ browser: MCNearbyServiceBrowser,
         foundPeer: MCPeerID,
         withDiscoveryInfo info: [String : String]?
@@ -189,7 +195,7 @@ extension BluetoothService: MCNearbyServiceBrowserDelegate {
         peersSubject.send(Peer(peer: foundPeer, status: .connected))
     }
 
-    func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+    public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         logger.info("Потерян peer: \(peerID.displayName)")
         peersSubject.send(Peer(peer: peerID, status: .disconnected))
     }

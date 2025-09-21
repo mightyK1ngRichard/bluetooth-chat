@@ -4,15 +4,22 @@
 //
 
 import SwiftUI
+import Coordinator
 
 @main
 struct NearbyChatApp: App {
 
-    let coordinator = ConnectionCoordinator()
+    let coordinator: ConnectionCoordinator
+
+    init() {
+        DependencyRegistry.registerAll()
+        coordinator = ConnectionCoordinator()
+    }
 
     var body: some Scene {
         WindowGroup {
             NavigatableView(coordinator: coordinator)
+                .preferredColorScheme(.light)
         }
     }
 }

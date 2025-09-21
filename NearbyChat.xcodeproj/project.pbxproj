@@ -6,9 +6,148 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E5BA59152E7FF295001836B4 /* BluetoothService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA590E2E7FF295001836B4 /* BluetoothService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5BA598A2E806A82001836B4 /* BluetoothServiceInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */; };
+		E5BA598B2E806A82001836B4 /* BluetoothServiceInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5BA59962E806BD9001836B4 /* BluetoothServiceInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */; };
+		E5BA59A22E807032001836B4 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA599C2E807032001836B4 /* Coordinator.framework */; };
+		E5BA59A32E807032001836B4 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA599C2E807032001836B4 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5BA59B22E80703D001836B4 /* MKRCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59AC2E80703D001836B4 /* MKRCore.framework */; };
+		E5BA59B32E80703D001836B4 /* MKRCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59AC2E80703D001836B4 /* MKRCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5BA5A082E807162001836B4 /* MKRCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59AC2E80703D001836B4 /* MKRCore.framework */; };
+		E5BA5A142E8071BA001836B4 /* DependencyRegistry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA5A0E2E8071BA001836B4 /* DependencyRegistry.framework */; };
+		E5BA5A152E8071BA001836B4 /* DependencyRegistry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA5A0E2E8071BA001836B4 /* DependencyRegistry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5BA5A2C2E807319001836B4 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA5A262E807319001836B4 /* Resolver.framework */; };
+		E5BA5A2D2E807319001836B4 /* Resolver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA5A262E807319001836B4 /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E5BA5A352E807354001836B4 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA5A262E807319001836B4 /* Resolver.framework */; };
+		E5BA5A362E807372001836B4 /* BluetoothService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA590E2E7FF295001836B4 /* BluetoothService.framework */; };
+		E5BA5A372E807372001836B4 /* BluetoothServiceInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5BA59122E7FF295001836B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5BA58442E7FABDA001836B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5BA590D2E7FF295001836B4;
+			remoteInfo = BluetoothService;
+		};
+		E5BA59882E806A82001836B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5BA58442E7FABDA001836B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5BA59832E806A82001836B4;
+			remoteInfo = BluetoothServiceInterface;
+		};
+		E5BA59A02E807032001836B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5BA58442E7FABDA001836B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5BA599B2E807032001836B4;
+			remoteInfo = Coordinator;
+		};
+		E5BA59B02E80703D001836B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5BA58442E7FABDA001836B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5BA59AB2E80703D001836B4;
+			remoteInfo = MKRCore;
+		};
+		E5BA5A122E8071BA001836B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5BA58442E7FABDA001836B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5BA5A0D2E8071BA001836B4;
+			remoteInfo = DependencyRegistry;
+		};
+		E5BA5A2A2E807319001836B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5BA58442E7FABDA001836B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5BA5A252E807319001836B4;
+			remoteInfo = Resolver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5BA58D72E7FED39001836B4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E5BA598B2E806A82001836B4 /* BluetoothServiceInterface.framework in Embed Frameworks */,
+				E5BA59B32E80703D001836B4 /* MKRCore.framework in Embed Frameworks */,
+				E5BA5A2D2E807319001836B4 /* Resolver.framework in Embed Frameworks */,
+				E5BA5A152E8071BA001836B4 /* DependencyRegistry.framework in Embed Frameworks */,
+				E5BA59A32E807032001836B4 /* Coordinator.framework in Embed Frameworks */,
+				E5BA59152E7FF295001836B4 /* BluetoothService.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E5BA584C2E7FABDA001836B4 /* NearbyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA590E2E7FF295001836B4 /* BluetoothService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluetoothService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluetoothServiceInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA599C2E807032001836B4 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA59AC2E80703D001836B4 /* MKRCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKRCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA5A0E2E8071BA001836B4 /* DependencyRegistry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependencyRegistry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA5A262E807319001836B4 /* Resolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E5BA597E2E7FF7D3001836B4 /* Exceptions for "Services" folder in "BluetoothService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BluetoothService/Sources/BluetoothService.swift,
+				BluetoothService/Sources/BluetoothServiceAssembly.swift,
+			);
+			target = E5BA590D2E7FF295001836B4 /* BluetoothService */;
+		};
+		E5BA59942E806B55001836B4 /* Exceptions for "Services" folder in "BluetoothServiceInterface" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BluetoothService/Interface/AnyBluetoothService.swift,
+				BluetoothService/Interface/Peer.swift,
+			);
+			target = E5BA59832E806A82001836B4 /* BluetoothServiceInterface */;
+		};
+		E5BA59C12E807060001836B4 /* Exceptions for "Utilities" folder in "Coordinator" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Coordinator/Coordinator.swift,
+				Coordinator/NavigatableView.swift,
+				Coordinator/Router.swift,
+			);
+			target = E5BA599B2E807032001836B4 /* Coordinator */;
+		};
+		E5BA59C92E80711C001836B4 /* Exceptions for "Utilities" folder in "MKRCore" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MKRCore/Extensions/OnFirstAppearModifier.swift,
+				MKRCore/MKRLogger.swift,
+			);
+			target = E5BA59AB2E80703D001836B4 /* MKRCore */;
+		};
+		E5BA5A202E807286001836B4 /* Exceptions for "Utilities" folder in "NearbyChat" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DependencyRegistry/DependencyRegistry.swift,
+			);
+			target = E5BA584B2E7FABDA001836B4 /* NearbyChat */;
+		};
+		E5BA5A342E80731E001836B4 /* Exceptions for "Utilities" folder in "Resolver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resolver/Resolver.swift,
+			);
+			target = E5BA5A252E807319001836B4 /* Resolver */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E5BA584E2E7FABDA001836B4 /* NearbyChat */ = {
@@ -16,10 +155,82 @@
 			path = NearbyChat;
 			sourceTree = "<group>";
 		};
+		E5BA58D02E7FED39001836B4 /* Utilities */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E5BA5A202E807286001836B4 /* Exceptions for "Utilities" folder in "NearbyChat" target */,
+				E5BA59C12E807060001836B4 /* Exceptions for "Utilities" folder in "Coordinator" target */,
+				E5BA59C92E80711C001836B4 /* Exceptions for "Utilities" folder in "MKRCore" target */,
+				E5BA5A342E80731E001836B4 /* Exceptions for "Utilities" folder in "Resolver" target */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E5BA58FC2E7FF26F001836B4 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E5BA597E2E7FF7D3001836B4 /* Exceptions for "Services" folder in "BluetoothService" target */,
+				E5BA59942E806B55001836B4 /* Exceptions for "Services" folder in "BluetoothServiceInterface" target */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E5BA58492E7FABDA001836B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BA598A2E806A82001836B4 /* BluetoothServiceInterface.framework in Frameworks */,
+				E5BA59B22E80703D001836B4 /* MKRCore.framework in Frameworks */,
+				E5BA5A2C2E807319001836B4 /* Resolver.framework in Frameworks */,
+				E5BA5A142E8071BA001836B4 /* DependencyRegistry.framework in Frameworks */,
+				E5BA59A22E807032001836B4 /* Coordinator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA590B2E7FF295001836B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BA5A082E807162001836B4 /* MKRCore.framework in Frameworks */,
+				E5BA59962E806BD9001836B4 /* BluetoothServiceInterface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59812E806A82001836B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59992E807032001836B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59A92E80703D001836B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A0B2E8071BA001836B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5BA5A362E807372001836B4 /* BluetoothService.framework in Frameworks */,
+				E5BA5A372E807372001836B4 /* BluetoothServiceInterface.framework in Frameworks */,
+				E5BA5A352E807354001836B4 /* Resolver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A232E807319001836B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +244,9 @@
 			isa = PBXGroup;
 			children = (
 				E5BA584E2E7FABDA001836B4 /* NearbyChat */,
+				E5BA58D02E7FED39001836B4 /* Utilities */,
+				E5BA58FC2E7FF26F001836B4 /* Services */,
+				E5BA592A2E7FF4DA001836B4 /* Frameworks */,
 				E5BA584D2E7FABDA001836B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,11 +255,69 @@
 			isa = PBXGroup;
 			children = (
 				E5BA584C2E7FABDA001836B4 /* NearbyChat.app */,
+				E5BA590E2E7FF295001836B4 /* BluetoothService.framework */,
+				E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */,
+				E5BA599C2E807032001836B4 /* Coordinator.framework */,
+				E5BA59AC2E80703D001836B4 /* MKRCore.framework */,
+				E5BA5A0E2E8071BA001836B4 /* DependencyRegistry.framework */,
+				E5BA5A262E807319001836B4 /* Resolver.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E5BA592A2E7FF4DA001836B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E5BA59092E7FF295001836B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA597F2E806A82001836B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59972E807032001836B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59A72E80703D001836B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A092E8071BA001836B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A212E807319001836B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E5BA584B2E7FABDA001836B4 /* NearbyChat */ = {
@@ -55,10 +327,17 @@
 				E5BA58482E7FABDA001836B4 /* Sources */,
 				E5BA58492E7FABDA001836B4 /* Frameworks */,
 				E5BA584A2E7FABDA001836B4 /* Resources */,
+				E5BA58D72E7FED39001836B4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5BA59132E7FF295001836B4 /* PBXTargetDependency */,
+				E5BA59892E806A82001836B4 /* PBXTargetDependency */,
+				E5BA59A12E807032001836B4 /* PBXTargetDependency */,
+				E5BA59B12E80703D001836B4 /* PBXTargetDependency */,
+				E5BA5A132E8071BA001836B4 /* PBXTargetDependency */,
+				E5BA5A2B2E807319001836B4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E5BA584E2E7FABDA001836B4 /* NearbyChat */,
@@ -69,6 +348,126 @@
 			productName = NearbyChat;
 			productReference = E5BA584C2E7FABDA001836B4 /* NearbyChat.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E5BA590D2E7FF295001836B4 /* BluetoothService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BA59162E7FF295001836B4 /* Build configuration list for PBXNativeTarget "BluetoothService" */;
+			buildPhases = (
+				E5BA59092E7FF295001836B4 /* Headers */,
+				E5BA590A2E7FF295001836B4 /* Sources */,
+				E5BA590B2E7FF295001836B4 /* Frameworks */,
+				E5BA590C2E7FF295001836B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothService;
+			packageProductDependencies = (
+			);
+			productName = BluetoothService;
+			productReference = E5BA590E2E7FF295001836B4 /* BluetoothService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5BA59832E806A82001836B4 /* BluetoothServiceInterface */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BA598C2E806A82001836B4 /* Build configuration list for PBXNativeTarget "BluetoothServiceInterface" */;
+			buildPhases = (
+				E5BA597F2E806A82001836B4 /* Headers */,
+				E5BA59802E806A82001836B4 /* Sources */,
+				E5BA59812E806A82001836B4 /* Frameworks */,
+				E5BA59822E806A82001836B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothServiceInterface;
+			packageProductDependencies = (
+			);
+			productName = BluetoothServiceInterface;
+			productReference = E5BA59842E806A82001836B4 /* BluetoothServiceInterface.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5BA599B2E807032001836B4 /* Coordinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BA59A42E807032001836B4 /* Build configuration list for PBXNativeTarget "Coordinator" */;
+			buildPhases = (
+				E5BA59972E807032001836B4 /* Headers */,
+				E5BA59982E807032001836B4 /* Sources */,
+				E5BA59992E807032001836B4 /* Frameworks */,
+				E5BA599A2E807032001836B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coordinator;
+			packageProductDependencies = (
+			);
+			productName = Coordinator;
+			productReference = E5BA599C2E807032001836B4 /* Coordinator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5BA59AB2E80703D001836B4 /* MKRCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BA59B42E80703D001836B4 /* Build configuration list for PBXNativeTarget "MKRCore" */;
+			buildPhases = (
+				E5BA59A72E80703D001836B4 /* Headers */,
+				E5BA59A82E80703D001836B4 /* Sources */,
+				E5BA59A92E80703D001836B4 /* Frameworks */,
+				E5BA59AA2E80703D001836B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKRCore;
+			packageProductDependencies = (
+			);
+			productName = MKRCore;
+			productReference = E5BA59AC2E80703D001836B4 /* MKRCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5BA5A0D2E8071BA001836B4 /* DependencyRegistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BA5A162E8071BA001836B4 /* Build configuration list for PBXNativeTarget "DependencyRegistry" */;
+			buildPhases = (
+				E5BA5A092E8071BA001836B4 /* Headers */,
+				E5BA5A0A2E8071BA001836B4 /* Sources */,
+				E5BA5A0B2E8071BA001836B4 /* Frameworks */,
+				E5BA5A0C2E8071BA001836B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DependencyRegistry;
+			packageProductDependencies = (
+			);
+			productName = DependencyRegistry;
+			productReference = E5BA5A0E2E8071BA001836B4 /* DependencyRegistry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5BA5A252E807319001836B4 /* Resolver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5BA5A2E2E807319001836B4 /* Build configuration list for PBXNativeTarget "Resolver" */;
+			buildPhases = (
+				E5BA5A212E807319001836B4 /* Headers */,
+				E5BA5A222E807319001836B4 /* Sources */,
+				E5BA5A232E807319001836B4 /* Frameworks */,
+				E5BA5A242E807319001836B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Resolver;
+			packageProductDependencies = (
+			);
+			productName = Resolver;
+			productReference = E5BA5A262E807319001836B4 /* Resolver.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +482,24 @@
 				ORGANIZATIONNAME = MightyKingRichard;
 				TargetAttributes = {
 					E5BA584B2E7FABDA001836B4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E5BA590D2E7FF295001836B4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E5BA59832E806A82001836B4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E5BA599B2E807032001836B4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E5BA59AB2E80703D001836B4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E5BA5A0D2E8071BA001836B4 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					E5BA5A252E807319001836B4 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -102,12 +519,60 @@
 			projectRoot = "";
 			targets = (
 				E5BA584B2E7FABDA001836B4 /* NearbyChat */,
+				E5BA590D2E7FF295001836B4 /* BluetoothService */,
+				E5BA59832E806A82001836B4 /* BluetoothServiceInterface */,
+				E5BA599B2E807032001836B4 /* Coordinator */,
+				E5BA59AB2E80703D001836B4 /* MKRCore */,
+				E5BA5A0D2E8071BA001836B4 /* DependencyRegistry */,
+				E5BA5A252E807319001836B4 /* Resolver */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E5BA584A2E7FABDA001836B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA590C2E7FF295001836B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59822E806A82001836B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA599A2E807032001836B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59AA2E80703D001836B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A0C2E8071BA001836B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A242E807319001836B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +589,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5BA590A2E7FF295001836B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59802E806A82001836B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59982E807032001836B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA59A82E80703D001836B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A0A2E8071BA001836B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5BA5A222E807319001836B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5BA59132E7FF295001836B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5BA590D2E7FF295001836B4 /* BluetoothService */;
+			targetProxy = E5BA59122E7FF295001836B4 /* PBXContainerItemProxy */;
+		};
+		E5BA59892E806A82001836B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5BA59832E806A82001836B4 /* BluetoothServiceInterface */;
+			targetProxy = E5BA59882E806A82001836B4 /* PBXContainerItemProxy */;
+		};
+		E5BA59A12E807032001836B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5BA599B2E807032001836B4 /* Coordinator */;
+			targetProxy = E5BA59A02E807032001836B4 /* PBXContainerItemProxy */;
+		};
+		E5BA59B12E80703D001836B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5BA59AB2E80703D001836B4 /* MKRCore */;
+			targetProxy = E5BA59B02E80703D001836B4 /* PBXContainerItemProxy */;
+		};
+		E5BA5A132E8071BA001836B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5BA5A0D2E8071BA001836B4 /* DependencyRegistry */;
+			targetProxy = E5BA5A122E8071BA001836B4 /* PBXContainerItemProxy */;
+		};
+		E5BA5A2B2E807319001836B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5BA5A252E807319001836B4 /* Resolver */;
+			targetProxy = E5BA5A2A2E807319001836B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E5BA58552E7FABDB001836B4 /* Debug */ = {
@@ -304,6 +844,426 @@
 			};
 			name = Release;
 		};
+		E5BA59172E7FF295001836B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.BluetoothService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5BA59182E7FF295001836B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.BluetoothService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5BA598D2E806A82001836B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.BluetoothServiceInterface;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5BA598E2E806A82001836B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.BluetoothServiceInterface;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5BA59A52E807032001836B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.Coordinator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5BA59A62E807032001836B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.Coordinator;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5BA59B52E80703D001836B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.MKRCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5BA59B62E80703D001836B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.MKRCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5BA5A172E8071BA001836B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.DependencyRegistry;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5BA5A182E8071BA001836B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.DependencyRegistry;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5BA5A2F2E807319001836B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.Resolver;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5BA5A302E807319001836B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKCX3NJ774;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 MightyKingRichard. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.git.mightyK1ngRichard.Resolver;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +1281,60 @@
 			buildConfigurations = (
 				E5BA58582E7FABDB001836B4 /* Debug */,
 				E5BA58592E7FABDB001836B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BA59162E7FF295001836B4 /* Build configuration list for PBXNativeTarget "BluetoothService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BA59172E7FF295001836B4 /* Debug */,
+				E5BA59182E7FF295001836B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BA598C2E806A82001836B4 /* Build configuration list for PBXNativeTarget "BluetoothServiceInterface" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BA598D2E806A82001836B4 /* Debug */,
+				E5BA598E2E806A82001836B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BA59A42E807032001836B4 /* Build configuration list for PBXNativeTarget "Coordinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BA59A52E807032001836B4 /* Debug */,
+				E5BA59A62E807032001836B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BA59B42E80703D001836B4 /* Build configuration list for PBXNativeTarget "MKRCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BA59B52E80703D001836B4 /* Debug */,
+				E5BA59B62E80703D001836B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BA5A162E8071BA001836B4 /* Build configuration list for PBXNativeTarget "DependencyRegistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BA5A172E8071BA001836B4 /* Debug */,
+				E5BA5A182E8071BA001836B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5BA5A2E2E807319001836B4 /* Build configuration list for PBXNativeTarget "Resolver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5BA5A2F2E807319001836B4 /* Debug */,
+				E5BA5A302E807319001836B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

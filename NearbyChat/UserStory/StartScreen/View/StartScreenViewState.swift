@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import BluetoothServiceInterface
 
 @MainActor
 @Observable

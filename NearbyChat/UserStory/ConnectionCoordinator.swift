@@ -4,27 +4,29 @@
 //
 
 import SwiftUI
+import MKRCore
+import BluetoothServiceInterface
+import Coordinator
 
-final class ConnectionCoordinator {
+final class ConnectionCoordinator: AnyCoordinator {
 
-    let router = Router<ConnectionRoute>()
-    let blueService = BluetoothService()
-    private let logger = MRKLogger("Connection Coordinator")
+    var router: Router<ConnectionRoute>
+    private let logger = MKRLogger("Connection Coordinator")
 
-    @MainActor
-    @ViewBuilder
+    init(router: Router<ConnectionRoute> = .init()) {
+        self.router = router
+    }
+
     func makeView() -> some View {
         makeDestination(for: .start)
     }
 
-    @MainActor
-    @ViewBuilder
     func makeDestination(for route: ConnectionRoute) -> some View {
         switch route {
         case .start:
-            StartAssembly.assemble(blueService: blueService, output: self)
+            StartAssembly.assemble(output: self)
         case .chat:
-            ChatScreenAssembly.assemble(blueService: blueService)
+            ChatScreenAssembly.assemble()
         }
     }
 }

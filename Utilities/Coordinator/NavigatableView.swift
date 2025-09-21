@@ -5,18 +5,18 @@
 
 import SwiftUI
 
-struct NavigatableView: View {
+public struct NavigatableView<C: AnyCoordinator>: View {
 
     @State
-    var router: Router<ConnectionRoute>
-    let coordinator: ConnectionCoordinator
+    private var router: Router<C.Route>
+    private let coordinator: C
 
-    init(coordinator: ConnectionCoordinator) {
+    public init(coordinator: C) {
         router = coordinator.router
         self.coordinator = coordinator
     }
 
-    var body: some View {
+    public var body: some View {
         NavigationStack(path: $router.path) {
             ContentWrapperView(coordinator: coordinator)
                 .equatable()
@@ -24,13 +24,15 @@ struct NavigatableView: View {
     }
 }
 
-struct ContentWrapperView: View, Equatable {
+// MARK: - ContentWrapperView
 
-    let coordinator: ConnectionCoordinator
+struct ContentWrapperView<C: AnyCoordinator>: View, Equatable {
+
+    let coordinator: C
 
     var body: some View {
         coordinator.makeView()
-            .navigationDestination(for: ConnectionRoute.self) { route in
+            .navigationDestination(for: C.Route.self) { route in
                 coordinator.makeDestination(for: route)
             }
     }

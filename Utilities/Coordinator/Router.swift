@@ -6,11 +6,14 @@
 import SwiftUI
 
 @Observable
-final class Router<Route: Hashable> {
+public final class Router<Route: Hashable> {
 
     var path = NavigationPath()
 
-    func push(_ route: Route) {
+    public init() {
+    }
+
+    public func push(_ route: Route) {
         path.append(route)
     }
 }

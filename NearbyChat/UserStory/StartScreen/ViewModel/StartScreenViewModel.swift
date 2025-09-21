@@ -5,23 +5,25 @@
 
 import Combine
 import Foundation
+import MKRCore
+import BluetoothServiceInterface
 
 final class StartScreenViewModel: Sendable {
 
     private let state: StartScreenViewState
-    private let blueService: BluetoothService
+    private let blueService: AnyBluetoothService
 
     @MainActor
     private var cancellables: Set<AnyCancellable> = []
     @MainActor
     private weak var output: StartScreenViewModelOutput?
 
-    private let logger = MRKLogger("Start View Model")
+    private let logger = MKRLogger("Start View Model")
 
     @MainActor
     init(
         state: StartScreenViewState,
-        blueService: BluetoothService,
+        blueService: AnyBluetoothService,
         output: StartScreenViewModelOutput
     ) {
         self.state = state

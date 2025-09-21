@@ -5,6 +5,15 @@
 
 import SwiftUI
 
+extension View {
+
+    public func onFirstAppear(perform onFirstAppearAction: @escaping () -> () ) -> some View {
+        modifier(OnFirstAppearModifier(onFirstAppearAction))
+    }
+}
+
+// MARK: - OnFirstAppearModifier
+
 private struct OnFirstAppearModifier: ViewModifier {
 
     private let onFirstAppearAction: () -> Void
@@ -23,12 +32,5 @@ private struct OnFirstAppearModifier: ViewModifier {
                 hasAppeared = true
                 onFirstAppearAction()
             }
-    }
-}
-
-extension View {
-
-    func onFirstAppear(perform onFirstAppearAction: @escaping () -> () ) -> some View {
-        return modifier(OnFirstAppearModifier(onFirstAppearAction))
     }
 }
