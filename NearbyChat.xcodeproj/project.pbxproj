@@ -147,11 +147,21 @@
 			);
 			target = E5BA5A252E807319001836B4 /* Resolver */;
 		};
+		E5D03B0D2E809113005CD411 /* Exceptions for "NearbyChat" folder in "NearbyChat" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E5BA584B2E7FABDA001836B4 /* NearbyChat */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E5BA584E2E7FABDA001836B4 /* NearbyChat */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E5D03B0D2E809113005CD411 /* Exceptions for "NearbyChat" folder in "NearbyChat" target */,
+			);
 			path = NearbyChat;
 			sourceTree = "<group>";
 		};
@@ -798,6 +808,9 @@
 				DEVELOPMENT_TEAM = SKCX3NJ774;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NearbyChat/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Приложение использует Bluetooth для обмена сообщениями с другими устройствами";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Приложение ищет устройства в локальной сети для обмена сообщениями";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -826,6 +839,9 @@
 				DEVELOPMENT_TEAM = SKCX3NJ774;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NearbyChat/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Приложение использует Bluetooth для обмена сообщениями с другими устройствами";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Приложение ищет устройства в локальной сети для обмена сообщениями";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
