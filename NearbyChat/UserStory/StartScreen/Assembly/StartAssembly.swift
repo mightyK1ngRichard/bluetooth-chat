@@ -12,7 +12,7 @@ enum StartAssembly {
     @MainActor
     static func assemble(output: StartScreenViewModelOutput) -> some View {
         let state = StartScreenViewState()
-        let blueService = Resolver.resolve(AnyBluetoothService.self)
+        let blueService = MKRResolver.resolve(AnyBluetoothService.self)
         let viewModel = StartScreenViewModel(
             state: state,
             blueService: blueService,

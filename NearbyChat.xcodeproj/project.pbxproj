@@ -143,7 +143,7 @@
 		E5BA5A342E80731E001836B4 /* Exceptions for "Utilities" folder in "Resolver" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Resolver/Resolver.swift,
+				Resolver/MKRResolver.swift,
 			);
 			target = E5BA5A252E807319001836B4 /* Resolver */;
 		};

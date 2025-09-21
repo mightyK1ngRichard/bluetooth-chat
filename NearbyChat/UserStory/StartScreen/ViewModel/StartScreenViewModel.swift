@@ -39,6 +39,8 @@ final class StartScreenViewModel: Sendable {
                     state.peers.append(peer)
                 case .disconnected:
                     state.peers.removeAll(where: { $0.peer == peer.peer })
+                @unknown default:
+                    fatalError("Неизвестный статус")
                 }
             }
             .store(in: &cancellables)

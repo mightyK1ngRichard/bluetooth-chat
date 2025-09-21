@@ -5,7 +5,7 @@
 
 import Foundation
 
-public final class Resolver: Sendable {
+public final class MKRResolver: Sendable {
 
     private enum Registration {
         case factory(() -> Any)

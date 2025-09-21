@@ -11,7 +11,7 @@ import BluetoothService
 public enum DependencyRegistry {
 
     public static func registerAll() {
-        Resolver.registerSingleton(AnyBluetoothService.self) {
+        MKRResolver.registerSingleton(AnyBluetoothService.self) {
             BluetoothServiceImpl()
         }
     }
